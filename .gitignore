@@ -1,0 +1,39 @@
+# Next.js build output
+.next/
+out/
+
+# Node.js build folders
+node_modules/
+
+# Log files
+*.log
+
+# Package lock files
+package-lock.json
+yarn.lock
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+
+# Temporary files
+*.swp
+
+# Build artifacts from other tools (if used)
+dist/
+
+# Environment variables files
+.env*
+
+# Local development database files (if applicable)
+db.sqlite
+
+# Compiled TypeScript files in src (if not committed directly)
+**/*.js
+**/*.js.map
+
+# Storybook build output (if used)
+storybook-static/
