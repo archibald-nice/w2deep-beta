@@ -1,39 +1,57 @@
-# Next.js build output
-.next/
-out/
+# build output
+dist
+!.github/actions/*/dist
+.next
+target
+packages/next/wasm/@next
+tarballs/
+packages/next/*.tgz
 
-# Node.js build folders
-node_modules/
-
-# Log files
-*.log
-
-# Package lock files
+# dependencies
+node_modules
 package-lock.json
 yarn.lock
+!/yarn.lock
+test/node_modules
+.pnpm-store/
+.github/**/node_modules
 
-# IDE and editor files
-.vscode/
-.idea/
+# logs & pids
+*.log
+pids
+*.cpuprofile
+*.heapsnapshot
 
-# OS generated files
+# coverage
+.nyc_output
+coverage
+
+# test output
+test/**/out*
+test/**/next-env.d.ts
 .DS_Store
+/e2e-tests
+test/tmp/**
+test/.trace
+test/traces
 
-# Temporary files
-*.swp
+# Editors
+**/.idea
+**/.#*
+.nvmrc
 
-# Build artifacts from other tools (if used)
-dist/
+# examples
+examples/**/out
+examples/**/.env*.local
 
-# Environment variables files
-.env*
+pr-stats.md
+test-timings.json
 
-# Local development database files (if applicable)
-db.sqlite
+# Vercel
+.vercel
+.now
 
-# Compiled TypeScript files in src (if not committed directly)
-**/*.js
-**/*.js.map
-
-# Storybook build output (if used)
-storybook-static/
+# Cache
+*.tsbuildinfo
+.swc/
+.turbo
